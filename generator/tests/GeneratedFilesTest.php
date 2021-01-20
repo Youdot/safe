@@ -13,26 +13,6 @@ use SimpleXMLElement;
  */
 class GeneratedFilesTest extends TestCase
 {
-    public function testSprintf()
-    {
-        require_once __DIR__ . '/../../generated/strings.php';
-        require_once __DIR__ . '/../../lib/Exceptions/SafeExceptionInterface.php';
-        require_once __DIR__ . '/../../generated/Exceptions/StringsException.php';
-
-        $this->assertSame('foo', sprintf('foo'));
-        $this->assertSame('foobar', sprintf('foo%s', 'bar'));
-        $this->assertSame('foobarbaz', sprintf('foo%s%s', 'bar', 'baz'));
-
-        set_error_handler(function () {
-        });
-        try {
-            $this->expectException(StringsException::class);
-            sprintf('foo%s%s', 'bar');
-        } finally {
-            restore_error_handler();
-        }
-    }
-
     public function testPregMatch()
     {
         require_once __DIR__ . '/../../generated/pcre.php';
