@@ -1,5 +1,5 @@
 {
-    "name": "thecodingmachine/safe",
+    "name": "youdot/safe",
     "description": "PHP core functions that throw exceptions instead of returning FALSE on error",
     "license": "MIT",
     "autoload": {
@@ -100,7 +100,7 @@
         ]
     },
     "require": {
-        "php": ">=7.2"
+        "php": "^8.0"
     },
     "require-dev": {
         "phpstan/phpstan": "^0.12",
